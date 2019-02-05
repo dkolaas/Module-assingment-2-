@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Module assingment 2</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script>
+    
+        // 1. 
+        
+        function Food() {
+            this.make = "Pizza"
+        }
+        
+        Food.prototype.model = function() {
+            console.log ("Jeg arver min make " + this.make + " fra mine foreldre");
+        }
+        
+        var pizzarolls = new Food();
+        pizzarolls.model();
+        
+        // 2. 
+        
+        var arrayz = [1,2,3,4,5,6,7,8,9,10];
+        
+        var fem = arrayz.slice(4,5);
+        console.log (fem);
+        
+        
+        // 3.
+        
+        arrayz.pop();
+        console.log (arrayz);
+        
+      
+        
+        // 4.
+        
+
+            
+        var originaltekst = "Strawberries are a popular part of spring and summer diets throughout America. Mouths water from coast to coast each spring, when small white blossoms start to appear on strawberry bushes. They announce the impending arrival of the ruby red berries that so many people crave. Ripe strawberries taste sweet and have only a slight hint of tartness. They are also one of the healthiest fruits around. There are countless recipes for the luscious red berry, but many people prefer to eat them fresh and unaccompanied."
+        
+        function bytteord () {
+            var bananstring = originaltekst.replace("Strawberries", "Bananas");
+            var bananstring = bananstring.replace("strawberries", "bananas");
+            var bananstring = bananstring.replace("Strawberry", "Banana");
+            var bananstring = bananstring.replace("strawberry", "banana");
+            console.log (bananstring);
+        }
+        
+        bytteord();
+       
+        // 5. 
+        
+        var bytteArray = ["PSG", "Ajax", "Brann", "Liverpool"];
+        
+        function doSomething() {
+            bytteArray = [];
+            bytteArray = ["Ferrari", "Honda", "Suzuki", "Opel"];
+            console.log (bytteArray);
+        }
+        doSomething();
+        
+        // 6. 
+        
+        var folkene = [
+            {fornavn: "Jonas", etternavn: "Hansen", alder: 28},
+            {fornavn: "Helga", etternavn: "Johansen", alder: 57},
+            {fornavn: "Oddvar", etternavn: "Stoltenberg", alder: 9}
+        ];
+        
+        function gjorNoe(person) {
+            return (person.fornavn == "Jonas");
+        }
+        
+        
+        var finnNavn = folkene.filter(gjorNoe);
+        console.log (finnNavn);
+        
+        // 7.
+        
+        var day = new Date();
+        
+        function Logdate () {
+            return day.getDate;
+        }
+        console.log (day);
+        
+    </script>
+    
+    
+    
+</body>
+</html>
